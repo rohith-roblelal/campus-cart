@@ -11,7 +11,13 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
     const session = await getSession();
     
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
-    const res = await fetch(`${apiUrl}/api/products/${id}`, { cache: 'no-store' });
+    let res;
+    try {
+        res = await fetch(`${apiUrl}/api/products/${id}`, { cache: 'no-store' });
+    } catch (error) {
+        console.error("Failed to fetch product:", error);
+        return notFound();
+    }
     
     if (!res.ok) {
         return notFound();
