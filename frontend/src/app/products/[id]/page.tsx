@@ -134,7 +134,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
                         )}
 
                         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                            {product.reviews.map((review) => (
+                            {product.reviews.map((review: any) => (
                                 <div key={review.id} style={{ padding: "24px", background: "rgba(255,255,255,0.02)", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.05)" }}>
                                     <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
                                         <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "var(--primary)", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "1.2rem" }}>
