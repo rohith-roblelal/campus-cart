@@ -1,0 +1,4 @@
+[00:00:04.406] Server  LOG     ✓ Ready in 3.1s
+[00:00:08.517] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.331] Server  ERROR   (node:7696) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
